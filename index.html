@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap" rel="stylesheet">
+  <link rel="shorcut icon" href = "./img/logo_unsaac.png">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Mis Finanzas | Unsaac</title>
+</head>
+<body>
+  <header class="header-section">
+    <div class="header-section-container">
+      <div class="header-section-logo-container">
+        <figure class="logo-figure-container">
+          <img src="./img/finanzas.png" alt="Logo">
+        </figure>
+      </div>
+      <div class="header-section-purpose">
+        <h2 class="purpose-text">
+          Amortizaciones
+        </h2>
+        <p class="course-text">
+          Ingeniría Económica
+        </p>
+      </div>
+      <div class="header-section-my-brand">
+        <h2 class="my-brand-text">
+          Tus Finanzas
+        </h2>
+      </div>
+    </div>
+  </header>
+  <main class="main-section-container">
+    <section class="main-section-principal-container">
+      <section class="main-section-description-content">
+        <div class="main-section-title-container">
+          <h1 class="main-section-title-white">
+            Tus finanzas personales,
+            <br>
+            <span class="main-section-title-orange">
+              más fáciles que nunca.
+            </span>
+          </h1>
+        </div>
+        <div class="main-section-function-page-description">
+          <div class="main-section-function-page-container">
+            <h3 class="main-section-function-text">
+              Está aplicación permite generar una tabla de amortización
+              según a los siguientes tipos:
+              <br>
+              <span class="subtitle-amortization-type">
+                Amortización Americana
+              </span>
+              <br>
+              Las cuotas e intereses son constantes y el capital se amortiza en la última cuotas
+              <br>
+              <span class="subtitle-amortization-type">
+                Amortización Francesa
+              </span>
+              <br>
+              Las coutas permanecen constante durante todo el periodo de amortización
+              <br>
+              <span class="subtitle-amortization-type">
+                Amortización Alemana
+              </span>
+              <br>
+              Las amortizaciones en cada cuota permanece constante
+            </h3>
+          </div>
+        </div>
+      </section>
+      <section class="main-section-form-content">
+        <div class="main-section-form-container">
+          <h4 class="title-form">
+            Calculadora de
+            <br>
+            Cuotas
+          </h4>
+          <form class="main-section-form" action="">
+            <p>
+              <div>
+                <label class="form-label" for="type-select">Tipo de amortización</label>
+                <select class="form-select-text" name="type-select" id="type-select" required>
+                  <option value="0">Seleccion el tipo</option>
+                  <option value="Americana">Americana</option>
+                  <option value="Francesa">Francesa</option>
+                  <option value="Alemana">Alemana</option>
+                </select>
+              </div>  
+              <div>
+                <label class="form-label" for="capital">Capital</label>
+                <input type="text" class="form-input-text" size="40" placeholder="Capital" name="capital" id="capital" required>
+                <select class="form-select-time" name="money" id="money">
+                  <option value="soles">Moneda</option>
+                  <option value="soles">Soles</option>
+                  <option value="dolares">Dolares</option>
+                </select>
+              </div>            
+              <div>
+                <label class="form-label" for="interes">Taza de interes</label>
+                <input type="text" class="form-input-text" size="40" placeholder="Interes" name="interes" id="interes" required>
+                <p class="form-text-description">
+                  %
+                </p>
+              </div>
+              <div>
+                <label class="form-label" for="tiempo">Nro de cuotas</label>
+                <input type="text" class="form-input-text" size="40" placeholder="Cuotas" name="tiempo" id="tiempo" required>
+                <!-- <select class="form-select-time" name="type-select" id="type-select">
+                  <option value="0">Tiempo</option>
+                  <option value="1">Años</option>
+                  <option value="2">Meses</option>
+                </select> -->
+                <p class="form-text-description">
+                  Cuotas
+                </p>
+              </div>
+              <div>
+                <p class="input-submit">
+                  <input type="button" class="form-input-submit" value="Calcular" onclick="onClickButtonCalculate()">
+                  <input type="button" class="form-input-refresh" value="Limpiar" onClick="location.reload();"/>
+                </p>
+              </div>              
+            </p>
+          </form>
+        </div>
+      </section>
+    </section>
+    <section class="main-section-js-container">
+      <div class="main-section-js-content">
+        <h3>
+          Tus amortizaciones calculadas
+        </h3>
+        <p id="java-print-data">
+        </p>
+        <p class="java-print-container" id="js-print">
+        </p>
+      </div>
+    </section>
+  </main>
+  <footer class="footer-section-container">
+    <section>
+      <div class="footer-section-agreement">
+        <p class="footer-section-agreement-title">
+          Una alianza entre
+          <br>
+          <span class="footer-section-title-enterprice">
+            Finanzas Para Todos
+          </span>
+          <br>
+          y la
+          <br>
+          <span class="footer-section-title-university">
+            Universidad Nacional San Antonio Abad del Cusco
+          </span>
+        </p>
+      </div>
+      <div class="footer-section-image-agreement">
+        <figure class="footer-section-enterprice-logo">
+          <img src="./img/finanzas.png" alt="">
+        </figure>
+        <figure class="footer-section-university-logo">
+          <img src="./img/logo_unsaac.png" alt="">
+        </figure>
+      </div>
+      <div class="footer-section-coworkers"> 
+        <h3 class="footer-section-who-are-we">
+          Grupo de trabajo
+        </h3>
+        <ul class="footer-section-coworkers-names">
+          <li>Cornejo Cruz Julio Wilson</li>
+          <li>Pfoccori Quispe Alex Harvey</li>
+          <li>Puma Huillca Richard</li>
+          <li>Quispe Palomino Luiyi Antony</li>
+        </ul>
+      </div>
+      <div class="footer-section-rights">
+        <p class="footer-section-text-right">
+          2022 © Curso de Ingeniría Económica - Ingeniería Informática y de Sistemas   |  Políticas de privacidad | Cookies | Aviso legal | Aceesibilidad
+        </p>
+      </div>
+    </section>
+  </footer>
+  <script src="./js/index.js">
+  </script>
+</body>
+</html>
