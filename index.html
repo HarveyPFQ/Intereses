@@ -21,7 +21,7 @@
       </div>
       <div class="header-section-purpose">
         <h2 class="purpose-text">
-          Amortizaciones
+          Interés Simple y Compuesto
         </h2>
         <p class="course-text">
           Ingeniría Económica
@@ -49,26 +49,19 @@
         <div class="main-section-function-page-description">
           <div class="main-section-function-page-container">
             <h3 class="main-section-function-text">
-              Está aplicación permite generar una tabla de amortización
-              según a los siguientes tipos:
+              Está aplicación permite generar una tabla de los siguientes tipos de interes:
               <br>
               <span class="subtitle-amortization-type">
-                Amortización Americana
+                Interés simple
               </span>
               <br>
-              Las cuotas e intereses son constantes y el capital se amortiza en la última cuotas
+              El capital inicial permanece constante durante el tiempo de prestamo
               <br>
               <span class="subtitle-amortization-type">
-                Amortización Francesa
+                Interés compuesto
               </span>
               <br>
-              Las coutas permanecen constante durante todo el periodo de amortización
-              <br>
-              <span class="subtitle-amortization-type">
-                Amortización Alemana
-              </span>
-              <br>
-              Las amortizaciones en cada cuota permanece constante
+              El interés de un periodo se capitaliza para el siguiente periodo
             </h3>
           </div>
         </div>
@@ -76,19 +69,18 @@
       <section class="main-section-form-content">
         <div class="main-section-form-container">
           <h4 class="title-form">
-            Calculadora de
+            Calculadora de Interés
             <br>
-            Cuotas
+            Simpe o Compuesto
           </h4>
           <form class="main-section-form" action="">
             <p>
               <div>
-                <label class="form-label" for="type-select">Tipo de amortización</label>
+                <label class="form-label" for="type-select">Tipo de interés</label>
                 <select class="form-select-text" name="type-select" id="type-select" required>
                   <option value="0">Seleccion el tipo</option>
-                  <option value="Americana">Americana</option>
-                  <option value="Francesa">Francesa</option>
-                  <option value="Alemana">Alemana</option>
+                  <option value="Simple">Simple</option>
+                  <option value="Compuesto">Compuesto</option>
                 </select>
               </div>  
               <div>
@@ -108,15 +100,15 @@
                 </p>
               </div>
               <div>
-                <label class="form-label" for="tiempo">Nro de cuotas</label>
-                <input type="text" class="form-input-text" size="40" placeholder="Cuotas" name="tiempo" id="tiempo" required>
+                <label class="form-label" for="tiempo">Tiempo</label>
+                <input type="text" class="form-input-text" size="40" placeholder="Tiempo" name="tiempo" id="tiempo" required>
                 <!-- <select class="form-select-time" name="type-select" id="type-select">
                   <option value="0">Tiempo</option>
                   <option value="1">Años</option>
                   <option value="2">Meses</option>
                 </select> -->
                 <p class="form-text-description">
-                  Cuotas
+                  
                 </p>
               </div>
               <div>
@@ -133,7 +125,7 @@
     <section class="main-section-js-container">
       <div class="main-section-js-content">
         <h3>
-          Tus amortizaciones calculadas
+          Interés calculado
         </h3>
         <p id="java-print-data">
         </p>
